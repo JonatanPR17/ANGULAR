@@ -1,0 +1,18 @@
+<div class="">
+    <h1 class="py-4 text-xl text-admin-12 uppercase px-4">{{inputData.title}} {{inputData.id}}</h1>
+    <form [formGroup]="formCategory" (ngSubmit)="submit(formCategory.value)" class="grid grid-cols-2 px-8 py-8 gap-5" >
+
+
+        <div class="col-span-2 w-full flex flex-col space-y-2">
+            <label for="name" class="text-admin-12 text-lg">Nombre</label>
+            <input type="text" name="" id="name" formControlName="name" class="outline-admin-7 w-full rounded-lg px-3 py-2" >
+        </div>
+
+        <div class="col-span-2 flex justify-between">
+            <button type="button" class="bg-admin-10 rounded-xl text-xl w-max text-admin-2 px-4 py-1 " (click)="closePopup()" >Cerrar</button>
+            <button type="submit" class="bg-admin-7 rounded-xl text-xl w-max text-admin-2 px-4 py-1 " >Crear</button>
+            <button type="button" class="bg-admin-7 rounded-xl text-xl w-max text-admin-2 px-4 py-1 " (click)="editBrand(inputData.valueId)" >Editar</button>
+        </div>
+
+    </form>
+</div>

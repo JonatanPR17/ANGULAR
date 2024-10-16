@@ -1,0 +1,29 @@
+.elements-style{
+    @apply  bg-white hover:bg-dashboard-1  flex justify-center items-center flex-col h-[6.5rem] space-y-5 border-2 shadow-xl border-dashboard-4
+    cursor-pointer  ;
+}
+
+.elements-letter{
+    @apply font-inter text-dashboard-5 font-normal text-[1rem] group-hover:text-dashboard-3 capitalize;
+}
+
+.button-style{
+    @apply bg-dashboard-1 font-inter font-normal text-[1rem] text-dashboard-3 capitalize text-center w-full h-10 rounded-b-xl
+    hover:text-dashboard-4 cursor-pointer  ;
+}
+
+.button-register{
+    @apply font-inter font-normal text-[1rem] bg-dashboard-1 w-max h-auto rounded-xl text-dashboard-3 hover:text-dashboard-4 px-3 py-2 absolute 
+    transform left-1/2 -translate-x-1/2 bottom-0 ; 
+}
+
+.style-div-father{
+    @apply bg-dashboard-1 w-full col-span-2  flex justify-between p-2  pl-3 ;
+}
+
+.style-label{
+    @apply font-inter font-medium text-white text-[1.1rem]  w-1/2 h-full border-r-2 border-dashboard-3 ;
+}
+.style-select{
+    @apply px-2 w-1/2 bg-dashboard-1  focus:outline-none focus:text-dashboard-3  h-full font-inter font-medium text-white text-[1.1rem] ;
+}

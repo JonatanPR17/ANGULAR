@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<nav class="bg-slate-200 w-full h-2/3">
+    <!-- <img [src]="imageContent" alt=""  > -->
+    <img src="" alt="">
+</nav>
+
+<section class="content-info-main">
+    <h2 class="h2-style-global">Bienvenidos a la Veterinaria Tomy</h2>
+    <h1 class="h1-style-global">un gran lugar donde salvamos vidas</h1>
+    <p class="p-style-global">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam laudantium voluptas saepe non aspernatur modi excepturi itaque, atque consequatur a sit quaerat sapiente! Velit aperiam reprehenderit consequatur voluptas voluptatum?</p>
+    <button class="buttom-style" (click)="hiddenText()" *ngIf="hiddenButton" >Leer mas <i class="fa-solid fa-arrow-right fa-lg" style="color: #1f2b6c;"></i></button>
+    <ng-container *ngIf="textHidden" >
+        <h2 class="h2-style-global">Vision</h2>
+        <p class="p-style-global">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam laudantium voluptas saepe non aspernatur modi excepturi itaque, atque consequatur a sit quaerat sapiente! Velit aperiam reprehenderit consequatur voluptas voluptatum?</p>
+        <h2 class="h2-style-global">Mision</h2>
+        <p class="p-style-global">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam laudantium voluptas saepe non aspernatur modi excepturi itaque, atque consequatur a sit quaerat sapiente! Velit aperiam reprehenderit consequatur voluptas voluptatum?</p>
+        
+        <button class="buttom-style" (click)="lessText()" >Leer menos <i class="fa-solid fa-arrow-right fa-lg" style="color: #1f2b6c;"></i></button>
+    </ng-container>
+</section>
+
+<div class="content-info-main">
+    <h2 class="h2-style-global">Atencion de confianza</h2>
+    <h1 class="h1-style-global">Nuestros Especialistas</h1>
+    <div class="w-[20rem] h-[34rem] ">
+        <div class="w-full h-[22rem] rounded-t-xl">
+            <img src="" alt="d" class="w-full h-[22rem] rounded-t-xl bg-dashboard-4">
+        </div>
+        <div class="w-full h-[12rem]">
+            <div class="w-full h-[9rem] flex flex-col items-center justify-center bg-dashboard-3 space-y-1">
+                <h3 class="font-inter text-dashboard-1 text-[1rem] font-normal capitalize">Juan  Tomy Verbamp</h3>
+                <h4 class="font-inter text-dashboard-1 text-[1.2rem] font-bold uppercase">Medico Veterinario</h4>
+                <div class="flex space-x-3 py-2">
+                    <i class="fa-brands fa-facebook fa-xl text-dashboard-1 "></i>
+                    <i class="fa-brands fa-twitter  fa-xl text-dashboard-1 "></i>
+                </div>
+            </div>
+            <div class="contact-button-style">Ver perfil</div>
+        </div>
+    </div>
+</div>
+
+
+<app-panel-service></app-panel-service>
+
+<app-panel-product></app-panel-product>
+
+<app-panel-contact></app-panel-contact>
+
+<app-footer></app-footer>

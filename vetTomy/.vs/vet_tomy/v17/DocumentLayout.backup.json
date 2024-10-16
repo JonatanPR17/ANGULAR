@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JEREMY\\source\\repos\\vetTomy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C715477D-736B-49C2-B103-C2D7C2DCA7B0}|vetTomy\\vet_tomy.csproj|c:\\users\\jeremy\\source\\repos\\vettomy\\vettomy\\controllers\\store\\productservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C715477D-736B-49C2-B103-C2D7C2DCA7B0}|vetTomy\\vet_tomy.csproj|solutionrelative:vettomy\\controllers\\store\\productservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6040A30E-76A3-4319-8165-06623C993D8B}|vet-tomy-data\\vet-tomy-data.csproj|c:\\users\\jeremy\\source\\repos\\vettomy\\vet-tomy-data\\store\\services\\productserviceservicedbimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6040A30E-76A3-4319-8165-06623C993D8B}|vet-tomy-data\\vet-tomy-data.csproj|solutionrelative:vet-tomy-data\\store\\services\\productserviceservicedbimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductServiceServiceDbImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JEREMY\\source\\repos\\vetTomy\\vet-tomy-data\\Store\\Services\\ProductServiceServiceDbImpl.cs",
+              "RelativeDocumentMoniker": "vet-tomy-data\\Store\\Services\\ProductServiceServiceDbImpl.cs",
+              "ToolTip": "C:\\Users\\JEREMY\\source\\repos\\vetTomy\\vet-tomy-data\\Store\\Services\\ProductServiceServiceDbImpl.cs",
+              "RelativeToolTip": "vet-tomy-data\\Store\\Services\\ProductServiceServiceDbImpl.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T14:07:44.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\JEREMY\\source\\repos\\vetTomy\\vetTomy\\Controllers\\Store\\ProductServiceController.cs",
+              "RelativeDocumentMoniker": "vetTomy\\Controllers\\Store\\ProductServiceController.cs",
+              "ToolTip": "C:\\Users\\JEREMY\\source\\repos\\vetTomy\\vetTomy\\Controllers\\Store\\ProductServiceController.cs",
+              "RelativeToolTip": "vetTomy\\Controllers\\Store\\ProductServiceController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwGwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T05:41:09.7Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

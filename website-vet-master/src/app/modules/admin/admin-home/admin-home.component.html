@@ -1,0 +1,53 @@
+<div class="flex ">
+    <app-admin-nav class="w-1/6" *ngIf="navCont" ></app-admin-nav>
+
+    <div  [ngClass]="navCont ? 'w-5/6' : 'w-full'" >
+        <div class="bg-white w-full h-28  border-b-[0.2rem] border-adm-border flex justify-between items-center  px-10 ">
+            <div class="flex items-center space-x-5">
+                <i class="fa-solid fa-bars fa-xl text-admin-12 cursor-pointer " (click)="hidden()" ></i>
+                <h1 class="font-inter text-adm-main-letter font-medium text-2xl">Panel de inicio</h1>
+            </div>
+            <div class="flex items-center space-x-9">
+                <div class="bg-adm-background p-3 rounded-full">
+                    <i class="fa-regular fa-envelope fa-xl text-admin-12"></i>
+                </div>
+                <div class="bg-adm-background p-3 rounded-full">
+                    <i class="fa-regular fa-bell fa-xl text-adm-alert-1"></i>
+                </div>
+                <div class="flex items-center space-x-3 relative">
+                    <img src="" alt="" class="w-12 h-12 rounded-full bg-cyan-100 ">
+                    <div class="flex items-center space-x-2 cursor-pointer" (click)="perfil()">
+                        <h3 class="text-adm-main-letter capitalize font-medium text-lg">Tomy Dexter</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-full bg-adm-background">
+            
+            <div class="grid gap-10 px-12 py-5" [ngClass]="navCont ? 'grid-cols-4': 'grid-cols-5' " >
+                <div class="bg-admin-4  w-full h-44 rounded-xl ">
+                    Productos
+                </div>
+                <div class="bg-admin-4  w-full h-44 rounded-xl ">
+                    Productos
+                </div>
+                <div class="bg-admin-4  w-full h-44 rounded-xl ">
+                    Productos
+                </div>
+                <div class="bg-admin-4  w-full h-44 rounded-xl ">
+                    Productos
+                </div>
+                <div class="bg-admin-4  w-full h-44 rounded-xl ">
+                    Productos
+                </div>
+                <div class="bg-admin-4  w-full h-44 rounded-xl ">
+                    Productos
+                </div>
+            </div>
+        </div>
+        
+        <router-outlet></router-outlet>
+    </div>
+ </div>
+

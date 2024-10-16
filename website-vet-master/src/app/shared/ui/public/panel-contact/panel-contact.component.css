@@ -1,0 +1,27 @@
+.div-content{
+    @apply bg-dashboard-3  hover:bg-dashboard-1 rounded-xl w-full h-full flex flex-col justify-center px-5 space-y-3;
+}
+
+.icon-element{
+    @apply  text-dashboard-1 group-hover:text-dashboard-3 pb-4 ;
+}
+
+.h3-element{
+    @apply font-inter font-bold text-[1.2rem] text-dashboard-1 group-hover:text-dashboard-3 uppercase ;
+}
+
+.p-element{
+    @apply font-inter font-normal text-[1.1rem] text-dashboard-1 group-hover:text-dashboard-3;
+}
+
+.hideen-content{
+    @apply  grid grid-rows-2 space-y-3 ; 
+}
+
+.hideen-day{
+    @apply font-inter text-[1.2rem] text-dashboard-3  border-b-4 border-dashboard-3 w-max;
+}
+
+.hideen-p{
+    @apply font-inter text-[1rem] text-white ;
+}

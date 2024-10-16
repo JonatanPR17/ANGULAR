@@ -1,0 +1,77 @@
+<!-- <div class="bg-adm-background font-inter">
+    @if (inputData.valueId) {
+
+        <h1 class="py-4 text-xl text-adm-main-letter uppercase px-4 font-bold">{{inputData.edit}}</h1>
+    }@else {
+
+        <h1 class="py-4 text-xl text-adm-main-letter uppercase px-4 font-bold">{{inputData.title}}</h1>
+    }
+    <form [formGroup]="formProductService" (ngSubmit)="submit(formProductService.value)" class="grid grid-cols-2 px-8 py-8 gap-5" >
+
+        <div class="w-full flex flex-col space-y-2">
+            <label for="type" class="text-adm-main-letter text-lg font-medium">Tipo</label>
+            <select (change)="nose($event)" name="" id="type" class="focus:outline-adm-primary w-full rounded-lg px-3 py-2 border-2 border-adm-border text-adm-main-letter font-bold" formControlName="type">
+                <option value="Servicio" class="bg-adm-secundary-letter">Servicio</option>
+                <option value="Producto" class="bg-adm-secundary-letter hover:bg-red-100">Producto</option>
+            </select>
+        </div>
+        <div class="col-span-2 w-full flex flex-col space-y-2">
+            <label for="name" class="text-adm-main-letter text-lg font-medium">Nombre</label>
+            <input type="text" name="" id="name" formControlName="name" class="outline-adm-primary w-full rounded-lg px-3 py-2 capitalize" >
+        </div>
+
+        @if (valueType=='Producto') {
+            <div class="w-full flex flex-col space-y-2">
+                <label for="price" class="text-adm-main-letter text-lg font-medium">Precio</label>
+                <input type="number" name="" id="price" formControlName="price"  class="outline-adm-primary w-full rounded-lg px-3 py-2">
+            </div>
+    
+            <div class="w-full flex flex-col space-y-2">
+                <label for="stock" class="text-adm-main-letter text-lg font-medium">Cantidad</label>
+                <input type="number" name="" id="stock" formControlName="stock"  class="outline-adm-primary w-full rounded-lg px-3 py-2">
+            </div>
+    
+            <div class="w-full flex flex-col space-y-2">
+                <label for="brandId" class="text-adm-main-letter text-lg font-medium">Marca</label>
+                <select name="" id="brandId" class="outline-adm-primary w-full rounded-lg px-3 py-2" formControlName="brandId" >
+                    <option  [value]="item.id" *ngFor="let item of brand" class="w-52 h-72"  >{{item.name}}</option>
+                </select>
+            </div>
+            
+            <div class="w-full flex flex-col space-y-2">
+                <label for="categoryId" class="text-adm-main-letter text-lg font-medium">Categoria</label>
+                <select name="" id="categoryId" formControlName="categoryId" class="outline-adm-primary w-full rounded-lg px-3 py-2">
+                    <option  [value]="item.id" *ngFor="let item of category" >{{item.name}}</option>
+                </select>
+            </div>
+        }
+
+        <div class="w-full flex flex-col space-y-2 col-span-2">
+            <label for="description" class="text-adm-main-letter text-lg font-medium">Descripción</label>
+            <textarea name="" id="description" rows="5" formControlName="description" class="capitalize outline-adm-primary w-full rounded-lg px-3 py-2"></textarea>
+        </div>
+
+        <div class="w-full flex flex-col space-y-2">
+            <label for="state" class="text-adm-main-letter text-lg font-medium">Estado</label>
+            <select name=""  id="state" formControlName="state" class="focus:outline-adm-primary w-full rounded-lg px-3 py-2 border-2 border-adm-border" >
+                <option [ngValue]="false">Desactivado</option>
+                <option [ngValue]="true">Activo</option>
+            </select>
+        </div>
+
+        <div class="w-full flex flex-col space-y-2 col-span-2">
+            <label for="image" class="text-adm-main-letter text-lg font-medium">Imagen</label>
+            <input type="file"   name="" id="image" formControlName="image" class="outline-adm-primary w-full" (change)="updateImage($event)" >
+        </div>
+        
+        <div class="col-span-2 flex justify-between">
+            <button type="button" class="bg-adm-alert-1 rounded-xl text-xl w-max text-admin-2 px-4 py-1 " (click)="close()" >Cerrar</button>
+            @if (inputData.valueId) {
+                <button type="button" class="bg-adm-combine-1 rounded-xl text-xl w-max text-admin-2 px-4 py-1 " (click)="updateRegister(inputData.valueId)" >Editar</button>
+            }@else {
+                <button type="submit" class="bg-adm-combine-1 rounded-xl text-xl w-max text-admin-2 px-4 py-1 ">Crear</button>
+            }
+        </div>
+    </form>
+</div>
+ -->

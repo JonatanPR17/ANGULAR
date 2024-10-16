@@ -1,0 +1,11 @@
+.p-style-global{
+    @apply font-inter text-[1rem] text-dashboard-5 font-normal px-global text-center ;
+} 
+.buttom-style{
+    @apply font-inter text-[1rem] text-dashboard-2 font-normal capitalize flex items-center *:ml-2;
+}
+
+.contact-button-style{
+    @apply w-full h-[3rem] bg-dashboard-1 font-inter text-dashboard-3 hover:text-white text-[1rem] font-normal capitalize 
+    flex justify-center items-center rounded-b-xl;
+}

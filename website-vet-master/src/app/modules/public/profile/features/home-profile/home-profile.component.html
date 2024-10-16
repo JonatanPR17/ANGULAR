@@ -1,0 +1,90 @@
+<app-header></app-header>
+
+<div class="mx-auto my-0 grid grid-cols-1 md:grid-cols-12 font-inter">
+    <div class="col-span-1 md:col-span-3 bg-dashboard-4 shadow-2xl space-y-4 p-5">
+        <div class="w-full py-5 text-center">
+            <h1 *ngIf="profile" class="text-xl font-semibold text-dashboard-1"> Hola {{ profile.name }} {{ profile.lastName }}</h1>
+            
+            <div class="relative flex justify-center items-center">
+                <!-- Si hay imagen, mostrar la imagen -->
+                <img 
+                  *ngIf="profile?.profilePictureUrl"
+                  [src]="profile?.profilePictureUrl"
+                  alt="Foto de Perfil"
+                  class="w-28 h-28 rounded-full object-cover border-4 border-gray-300"
+                >
+              
+                <!-- Si no hay imagen, mostrar las iniciales -->
+                <div 
+                  *ngIf="!profile?.profilePictureUrl" 
+                  class="w-28 h-28 flex items-center justify-center rounded-full bg-gray-400 text-white text-3xl font-semibold border-4 border-gray-300"
+                >
+                  {{ profile?.name?.charAt(0) }}{{ profile?.lastName?.charAt(0) }}
+                </div>
+            </div>
+            
+            <!-- Botón para cambiar la foto de perfil -->
+            <div class="mt-4">
+                <label for="profilePicture" class="cursor-pointer bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Cambiar Foto</label>
+                <input type="file" id="profilePicture" (change)="onProfilePictureChange($event)" class="hidden">
+            </div>
+
+            <!-- Botón para eliminar la foto de perfil -->
+            <button (click)="deleteProfilePicture()" class="mt-2 text-red-500 underline">Eliminar Foto</button>
+        </div>
+
+        <!-- Sección añadida -->
+        <div>
+            <h1 class="py-3 px-2 text-xl cursor-pointer hover:bg-gray-300 transition">Mi perfil</h1>
+        </div>
+        <div>
+            <h1 class="py-3 px-2 text-xl cursor-pointer hover:bg-gray-300 transition">Mis Compras</h1>
+        </div>
+        <div class="cursor-pointer hover:bg-red-200 transition">
+            <h1 class="py-3 px-2 text-xl">Cerrar sesión</h1>
+        </div>
+    </div>
+
+    <div class="col-span-1 md:col-span-9 bg-dashboard-3 p-6">
+        <h2 class="text-3xl font-semibold mb-4">Detalles del Perfil</h2>
+        <div class="bg-white shadow-lg rounded-lg p-4 mb-6">
+            <h3 class="text-2xl font-semibold">Información Personal</h3>
+            <p *ngIf="profile"><strong>Nombre:</strong> {{profile.name}} {{profile.lastName}}</p>
+            <p *ngIf="profile"><strong>Correo Electrónico:</strong> {{profile.mail}}</p>
+            <p *ngIf="profile"><strong>Teléfono:</strong> 555-1234-5678</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-4 mb-6">
+            <h3 class="text-2xl font-semibold">Modificar Contraseña</h3>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Nueva Contraseña</label>
+                        <input 
+                            type="password" 
+                            placeholder="Ingresa tu nueva contraseña"
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+                        >
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Confirmar Contraseña</label>
+                        <input 
+                            type="password" 
+                            placeholder="Confirma tu nueva contraseña"
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+                        >
+                    </div>
+                </div>
+                <button type="submit" class="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Actualizar Contraseña</button>
+            </form>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-4">
+            <h3 class="text-2xl font-semibold">Mascotas Registradas</h3>
+            <ul class="list-disc pl-5">
+                <li>🐾 <span class="font-semibold">Fido</span> - Labrador, 3 años</li>
+                <li>🐱 <span class="font-semibold">Miau</span> - Siamesa, 2 años</li>
+            </ul>
+            <button class="mt-4 bg-green-600 text-white font-semibold py-2 px-4 rounded hover:bg-green-700 transition duration-300">Agregar Mascota</button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,15 @@
+.footer-style{
+    @apply px-global mt-16 bg-dashboard-1 w-full h-[27rem] grid grid-cols-4 py-16 gap-5 row-span-2;
+}
+
+.each-element-style{
+    @apply flex flex-col justify-between h-[14rem] pb-9;
+}
+
+.h3-element-style{
+    @apply font-inter font-semibold text-white text-[1.2rem];
+}
+
+.p-element-style{
+    @apply font-inter font-normal text-white text-[1rem];
+}

@@ -1,0 +1,81 @@
+<div>
+    <div class="content-info-main">
+        <h2 class="h2-style-global">Confia en nostros</h2>
+        <h1 class="h1-style-global">Nuestros servicios</h1>
+    </div>
+    <div class="mx-global grid grid-cols-12 gap-5 mt-16">
+        <div class="col-span-2">
+            <div class="grid grid-rows-4"  >
+                <div class="elements-style group"  *ngFor="let service of listService.slice(0,4)" (click)="getService(service.id)"  >
+                @if (service.type=='Servicio') {
+                        <i class="fa-solid fa-notes-medical fa-xl text-dashboard-2 group-hover:text-color-3" ></i>
+                        <h3 class="elements-letter">{{service.name}}</h3>
+                    } 
+                </div>
+            </div>
+            <button type="button" class="button-style" routerLink="/service">Ver mas</button>
+        </div>
+
+        <div class="col-span-10  grid grid-cols-4 gap-5 " *ngIf="specificService" >
+            <div class="col-span-2 space-y-4 relative">
+                <h1 class="font-inter font-medium text-[1.6rem] text-color-5 capitalize"   >{{specificService.name}}</h1>
+                <p class="font-inter font-normal text-[1rem] text-color-5">{{specificService.description}}</p>
+                <button type="button" class="button-register"  >Registrar cita</button>
+            </div>
+            <div class="col-span-2 grid grid-rows-2 gap-8 w-full h-full">
+                <img src="image/image1.png" alt="" class="w-full h-full rounded-lg">
+                <img src="image/image2.png" alt="" class="w-full h-full rounded-lg">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="py-16 relative" *ngIf="registerContent" >
+    <img src="image/image1.png" alt="" class="w-full  h-auto opacity-20">
+    <div class="px-global h-auto  absolute transform left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-between w-full">
+        <div class="w-[50%] px-5">
+            <h1 class="font-cormorant_Garamond text-color-2 font-bold text-[2rem]">Reserva tu cita</h1>
+            <p class="font-inter text-[1rem] text-color-5 font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi soluta et debitis, facere eligendi dolorum assumenda totam nemo, facilis dolores numquam non culpa modi architecto nisi nobis aspernatur quibusdam?</p>
+        </div>
+        <div class="w-1/2  h-full">
+            <form (ngSubmit)="onSubmit()" [formGroup]="formRegisterContacts" class="grid grid-cols-2 rounded-xl *:border-b-2  *:border-color-3 ">
+                <div class="style-div-father col-span-2 rounded-t-xl">
+                    <label for="typeService" class="style-label " >Servicio</label>
+                    <select name="" id="typeService" class="style-select">
+                        <option value="{{item.name}}"  class="bg-color-3 hover:bg-color-2 font-inter font-medium text-white text-[1.1rem] " *ngFor="let item of contentService" >{{item.name}}</option>
+                    </select>
+                </div>
+                <div class="style-div-father col-span-2">
+                    <label for="nameService" class="style-label ">Nombre</label>
+                    <input type="text" id="nameService" class="style-select">
+                </div>
+                
+                <div class="style-div-father col-span-2">
+                    <label for="celular" class="style-label">Celular</label>
+                    <input type="number" id="celular" class="style-select">
+                </div>
+                <div class="style-div-father col-span-2">
+                    <label for="email" class="style-label">Email</label>
+                    <input type="email" id="email" class="style-select">
+                </div>
+                <div class="style-div-father col-span-1">
+                    <label for="dia" class="style-label">Dia</label>
+                    <input type="date" id="dia" class="style-select">
+                </div>
+                <div class="style-div-father col-span-1">
+                    <label for="hora" class="style-label">Hora</label>
+                    <input type="time" id="hora" class="style-select" >
+                </div>
+                <div class="style-div-father col-span-2 flex flex-col   ">
+                    <label for="mensaje" class="font-inter font-medium text-white text-[1.1rem]  w-full h-full">Mensaje</label>
+                    <textarea name="" id="mensaje" class="bg-color-1  focus:outline-none focus:text-color-3  h-40 font-inter font-medium text-white text-[1.1rem]"></textarea>
+                </div>
+                <button type="submit" class="bg-color-3 col-span-2 p-2 text-xl  text-color-1 hover:text-white rounded-b-xl" >Enviar</button>
+
+            </form>
+        </div>
+    </div>
+</div> -->

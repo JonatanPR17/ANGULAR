@@ -1,0 +1,15 @@
+.div-father{
+    @apply flex justify-start mx-8 px-2 items-center space-x-5 hover:bg-admin-7 py-2 hover:rounded-lg;
+}
+
+.letter-son{
+    @apply font-inter font-medium text-xl text-white;
+}
+
+.li-style{
+    @apply text-white font-inter font-light text-[1rem]  ;
+}
+
+.icon-style{
+    @apply  text-admin-2  cursor-pointer;
+}

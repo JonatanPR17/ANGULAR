@@ -1,0 +1,9 @@
+.contacts-style-1{
+    @apply text-dashboard-1 font-inter font-medium text-[1rem] uppercase;
+}
+.contacts-style-2{
+    @apply text-dashboard-2 font-inter font-medium text-[1rem] capitalize;
+}
+.items-style-sidebar{
+    @apply  text-white font-inter font-medium text-[1.2rem] capitalize hover:text-dashboard-3 cursor-pointer;
+}

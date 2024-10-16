@@ -1,0 +1,99 @@
+<!-- <div class="bg-admin-1 w-1/6 h-screen fixed " *ngIf="navAdmin" >
+    <div class="flex py-8 mx-4 items-center justify-start space-x-3">
+        <img src="./image/image-admin.png" alt="" class="w-10 h-10 rounded-xl">
+        <h1 class="font-inter font-bold uppercase text-xl text-admin-3 text-center ">VT <span>ADMin</span></h1>
+    </div>
+    <div class="h-52 flex flex-col items-center space-y-5 justify-center ">
+        <img src="./image/image-admin.png" alt="" class="w-20 h-20 bg-slate-50 rounded-full">
+        <h2 class="text-xl text-admin-2">Tomy Dexter</h2>
+        <div class="flex space-x-7 items-center">
+            <i class="fa-solid fa-user icon-style "></i>
+            <i class="fa-solid fa-lock icon-style"></i>
+            <i class="fa-solid fa-envelope icon-style"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket icon-style" routerLink=""></i>
+        </div>
+    </div>
+    <div class="pt-5 space-y-2">
+        <div class="div-father" routerLink="/admin" >
+            <i class="fa-solid fa-house fa-md text-white"></i>
+            <h2 class="letter-son" >Inicio</h2>
+        </div>
+        <div class="div-father" (click)="list()"  >
+            <i class="fa-solid fa-cart-shopping fa-md text-white"></i>
+            <h2 class="letter-son" >Catalogo</h2>
+            <i class="fa-solid fa-chevron-right fa-md text-white absolute right-10" *ngIf="!listHidden" ></i>
+            <i class="fa-solid fa-chevron-down fa-md text-white absolute right-10" *ngIf="listHidden"></i>
+        </div>
+        <ul class="flex flex-col px-16 space-y-2" *ngIf="listHidden" >
+            <li class="text-admin-3 text-lg hover:bg-admin-7 px-2 py-1 hover:rounded-lg " routerLink="/admin/products" >Productos</li>
+            <li class="text-admin-3 text-lg hover:bg-admin-7 px-2 py-1 hover:rounded-lg" routerLink="/admin/details">Detalles</li>
+        </ul>
+        <div class="div-father ">
+            <i class="fa-solid fa-user fa-md text-white"></i>
+            <h2 class="letter-son">Clientes</h2>
+            <i class="fa-solid fa-chevron-right fa-md text-white absolute right-10 "></i>
+        </div>
+        <ul class="bg-color-1 flex mx-8 px-7 flex-col list-disc space-y-3">
+            <li class="li-style">Ventas</li>
+            <li class="li-style">Citas</li>
+            <li class="li-style">Reportes de clientes</li>
+        </ul>
+        <div class="div-father">
+            <i class="fa-solid fa-pencil fa-md text-white"></i>
+            <h2 class="letter-son">Ventas</h2>
+        </div>
+        <div class="div-father">
+            <i class="fa-solid fa-address-book fa-md text-white"></i>
+            <h2 class="letter-son">Servicios</h2>
+        </div>
+        <div class="div-father">
+            <i class="fa-solid fa-book fa-md text-white"></i>
+            <h2 class="letter-son">Reseñas</h2>
+        </div>
+
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+ -->
+
+ <div class="bg-white w-1/6 h-screen fixed border-[0.2rem] border-adm-border font-inter  shadow-xl">
+    <div class="flex h-28 items-center justify-center space-x-3">
+        <img src="" alt="" class="h-12 w-12 rounded-full bg-fuchsia-100">
+        <h1 class="text-3xl text-adm-main-letter font-extrabold ">AdminVet</h1>
+    </div>
+    <div class="flex items-center w-full px-8 my-8">
+        <ul class="w-full space-y-4">
+            <li class="flex items-center space-x-7 group bg-adm-primary rounded-lg w-full py-2 px-3" routerLink="/admin">
+                <i class="fa-solid fa-house fa-xl  group text-white "></i>
+                <h3 class="text-xl  capitalize text-white ">Home</h3>
+            </li>
+            <li class="flex items-center space-x-5 group hover:bg-adm-primary hover:rounded-lg w-full py-2 px-3" (click)="list()" >
+                <i class="fa-solid fa-cart-shopping fa-xl text-adm-secundary-letter group group-hover:text-white "></i>
+                <h3 class="text-xl text-adm-secundary-letter capitalize group-hover:text-white ">Catalogo</h3>
+                <i class="fa-solid fa-chevron-right fa-md text-adm-secundary-letter group-hover:text-white absolute right-10" *ngIf="!listHidden" ></i>
+                <i class="fa-solid fa-chevron-down fa-md text-white absolute right-10" *ngIf="listHidden"></i>
+            </li>
+            
+            <li class=" text-lg ml-9 flex flex-col space-y-3"  *ngIf="listHidden"  >
+                <h3 class="py-1 px-2 hover:bg-adm-primary text-adm-secundary-letter hover:text-white hover:rounded-lg" routerLink="/admin/products"  >Productos</h3>
+               
+            </li>
+
+            <li class="flex items-center space-x-5 group hover:bg-adm-primary hover:rounded-lg w-full py-2 px-3">
+                <i class="fa-solid fa-house fa-xl text-adm-secundary-letter group group-hover:text-white "></i>
+                <h3 class="text-xl text-adm-secundary-letter capitalize group-hover:text-white ">Home</h3>
+            </li>
+            <li class="flex items-center space-x-5 group hover:bg-adm-primary hover:rounded-lg w-full py-2 px-3">
+                <i class="fa-solid fa-house fa-xl text-adm-secundary-letter group group-hover:text-white "></i>
+                <h3 class="text-xl text-adm-secundary-letter capitalize group-hover:text-white ">Home</h3>
+            </li>
+            <li class="flex items-center space-x-5 group hover:bg-adm-primary hover:rounded-lg w-full py-2 px-3">
+                <i class="fa-solid fa-house fa-xl text-adm-secundary-letter group group-hover:text-white "></i>
+                <h3 class="text-xl text-adm-secundary-letter capitalize group-hover:text-white ">Home</h3>
+            </li>
+            
+        </ul>
+    </div>
+ </div>

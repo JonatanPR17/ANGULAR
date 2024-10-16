@@ -1,0 +1,55 @@
+<div class="sticky top-0 z-50 *:px-5 sm:*:px-global md:*:px-global lg:*:px-global  xl:*:px-global">
+    <div class="hidden sm:flex md:flex lg:flex  xl:flex justify-between items-center h-20 bg-white">
+        <div class="flex space-x-4 items-center">
+            <img src="./image/logo-company.jpg" alt="" class="rounded-full w-16 h-16">
+            <h1 class="font-cormorant_Garamond font-bold text-[36px] text-dashboard-1 uppercase">Veterinaria <span class="text-dashboard-2">Tomy</span></h1>
+        </div>
+        <div class="flex items-center space-x-5">
+            <div class="flex items-center space-x-3">
+                <i class="fa-duotone fa-solid fa-phone-volume fa-xl text-dashboard-1" ></i>
+                <div class="">
+                    <h3 class="contacts-style-1">Telefono</h3>
+                    <h4 class="contacts-style-2">987456132</h4>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fa-regular fa-clock fa-2xl text-dashboard-1" ></i>
+                <div class="">
+                    <h3 class="contacts-style-1">Horario</h3>
+                    <h4 class="contacts-style-2">10:00 a.m - 08:00 p.m</h4>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-location-dot fa-2xl text-dashboard-1" ></i>
+                <div class="">
+                    <h3 class="contacts-style-1">Ubicación</h3>
+                    <h4 class="contacts-style-2">Jr. Calixto #123</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class=" bg-dashboard-1 h-14 flex items-center">
+        <ul class=" space-x-10 hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex">
+            <li class="items-style-sidebar" routerLink=""  >inicio</li>
+            <li class="items-style-sidebar" routerLink="/service">servicio</li>
+            <li class="items-style-sidebar" routerLink="/product">tienda</li>
+            <li class="items-style-sidebar" routerLink="/review">reseñas</li>
+            <li class="items-style-sidebar relative "  (mouseenter)="show = true "  [routerLink]="profile? '/profile' : '/auth/sign-in' " >mi cuenta
+                <div class="absolute bg-dashboard-1 text-white top-12 w-48 -left-3 h-auto py-4 px-2 rounded-lg space-y-3" *ngIf="profile && show " (mouseleave)="show=false" >
+                    <h1 class="text-start px-2">Mi perfil</h1>
+                    <div class="flex space-x-3 items-center justify-center hover:bg-dashboard-3 rounded-lg px-1 py-1 " (click)="loginOut()" >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <h1>Cerrar sesión</h1>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="flex justify-between items-center w-full sm:flex lg:hidden xl:hidden 2xl:hidden">
+            <li class="font-cormorant_Garamond text-color-3 font-bold text-[1.5rem] uppercase">Veterinaria <span class="text-white">Tomy</span></li>
+            <li class="cursor-pointer">
+                <i class="fa-solid fa-bars fa-2xl text-white hover:text-color-3"></i>
+            </li>
+        </ul>
+    </div>
+</div>

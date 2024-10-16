@@ -1,0 +1,58 @@
+<div class=" w-screen h-screen  flex justify-center items-center">
+    <div class="bg-white rounded-xl shadow-2xl w-[60rem] h-[42rem]  shadow-dashboard-3 grid grid-cols-2">
+        <div class="flex items-center px-4 py-20 flex-col space-y-4 justify-center ">
+            <div class="flex space-x-3 items-center cursor-pointer " routerLink="" >
+                <img src="" alt="" class="h-8 w-8 rounded-full bg-dashboard-1" >
+                <h1 class="uppercase text-dashboard-1 text-2xl text-center font-bold font-inter " >Veterinaria <span class="text-dashboard-2">tomy</span></h1>
+            </div>
+            <h1 class="text-dashboard-2 text-4xl capitalize font-inter font-bold ">Iniciar sesión</h1>
+            <div class="flex space-x-3">
+                <div class="w-9 h-9 border rounded-lg shadow-xl flex items-center justify-center">
+                    <i class="fa-brands fa-google fa-md text-dashboard-5"></i>
+                </div>
+                <div class="w-9 h-9 border rounded-lg shadow-xl flex items-center justify-center">
+                    <i class="fa-brands fa-github fa-md text-dashboard-5"></i>
+                </div>
+                <div class="w-9 h-9 border rounded-lg shadow-xl flex items-center justify-center">
+                    <i class="fa-brands fa-google fa-md text-dashboard-5"></i>
+                </div>
+                <div class="w-9 h-9 border rounded-lg shadow-xl flex items-center justify-center">
+                    <i class="fa-brands fa-google fa-md text-dashboard-5"></i>
+                </div>
+            </div>
+            <h3 class=" font-inter text-dashboard-5 text-sm font-light">Use su correo y contraseña</h3>
+            <form (ngSubmit)="onSubmit(SignInForms.value)" [formGroup]="SignInForms" class="space-y-5 ">
+                <div class="flex flex-col w-full">
+                    <div class="flex">
+                        <div class="bg-dashboard-3 px-3 py-2">
+                            <i class="fa-regular fa-envelope fa-sm text-dashboard-5"></i>
+                        </div>
+                        <input type="email" placeholder="Email" formControlName="mail"  class=" outline-none bg-dashboard-3 py-1 w-64 text-dashboard-5 font-cormorant_Garamond text-lg">
+                    </div>
+                    <div *ngIf="getError('mail')" class="text-dashboard-5 text-sm" >{{getError('mail')}}</div>
+                </div>
+
+                <div class="flex flex-col w-full ">
+                    <div class="flex w-full">
+                        <div class="bg-dashboard-3  px-3 py-2">
+                            <i class="fa-solid fa-key fa-sm text-dashboard-5"></i>
+                        </div>
+                        <input type="password" placeholder="Contraseña" formControlName="password"  class=" outline-none bg-dashboard-3 py-1 w-64 text-dashboard-5 font-cormorant_Garamond text-lg">
+                    </div>
+                    <div *ngIf="getError('password')" class="text-dashboard-5 text-sm" >{{getError('password')}}</div>
+                </div>
+                
+                <h3 class="font-inter text-sm text-dashboard-5 font-normal underline text-center hover:text-dashboard-2 cursor-pointer">¿Olvidaste tu contraseña?</h3>
+                <button type="submit" [disabled]="!SignInForms.valid || registerState == stateEnum.loading "  class="bg-dashboard-1 text-dashboard-3 hover:text-dashboard-4 font-inter font-normal text-md  px-4 py-2 rounded-lg uppercase" >Iniciar sesión</button>
+            </form>
+
+        </div>
+        <div class="bg-dashboard-1 h-full flex justify-center items-center rounded-tl-full rounded-bl-full  rounded-tr-xl rounded-br-xl">
+            <div class="space-y-5 flex flex-col items-center ">
+                <h1 class="font-inter font-bold text-5xl text-white ">¡Bienvenido!</h1>
+                <p class="text-sm text-center text-white px-14 font-normal">Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                <button type="button" class="capitalize px-10 py-2 border-2 rounded-lg border-white font-inter text-dashboard-3 hover:text-white text-lg" routerLink="/auth/sign-up">Registrarse</button>
+            </div>
+        </div>
+    </div>
+</div>
